@@ -1,0 +1,53 @@
+#notifications {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    z-index: 99999;
+    width: 20em;
+
+    & > .notifications__notice {
+        position: relative;
+        display: none;
+        padding: 0.8em;
+        border-radius: 0.4em;
+
+        &:not(:first-child) {
+            margin-top: 2em;
+        }
+
+        > .notice__title {
+            font-weight: bold;
+            margin-bottom: 0.4em;
+        }
+
+        > .notice__close {
+            position: absolute;
+            top: 0.4em;
+            right: 0.4em;
+            font-weight: bold;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &.notice_default {
+            background: rgb(255, 255, 255);
+            box-shadow: 0 0 0.6em 0 rgb(0, 0, 0);
+        }
+
+        &.notice_success {
+            color: rgb(0, 100, 0);
+            background: rgb(230, 255, 230);
+            box-shadow: 0 0 0.6em 0 rgb(0, 150, 0);
+        }
+
+        &.notice_error {
+            color: rgb(200, 0, 0);
+            background: rgb(255, 230, 230);
+            box-shadow: 0 0 0.6em 0 rgb(255, 0, 0);
+        }
+    }
+}

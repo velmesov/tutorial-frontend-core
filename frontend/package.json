@@ -1,0 +1,32 @@
+{
+    "name": "frontend-core",
+    "version": "1.0.0",
+    "description": "Frontend core",
+    "scripts": {
+        "build:dev": "webpack --config webpack.config.js --env.mode=development",
+        "build:prod": "webpack --config webpack.config.js --env.mode=production",
+        "clear:dist": "rm -rvf ../web/dist/*"
+    },
+    "author": "Yuri Velmesov",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.11.1",
+        "@babel/preset-env": "^7.11.0",
+        "autoprefixer": "^9.8.6",
+        "babel-loader": "^8.1.0",
+        "css-loader": "^3.6.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "node-sass": "^4.14.1",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.2",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12"
+    },
+    "browserslist": [
+        "defaults",
+        "last 5 versions"
+    ],
+    "dependencies": {
+        "jquery": "^3.5.1"
+    }
+}
